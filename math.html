@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Math</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/calculator.css" rel="stylesheet">
+  <link href="css/area.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top blue" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Home</a>
+        <a class="navbar-brand js-scroll-trigger" href="english.html">English</a>
+        <a class="navbar-brand js-scroll-trigger" href="science.html">Science</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded red" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-itm mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger scarlet" href="#portfolio">Tools</a>
+          </li>
+          <li class="nav-itm mx-0 mx-lg-1 scarlet">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger scarlet" href="#disqus">Conversation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center red">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <img class="masthead-avatar mb-5" src="img/portfolio/math.png" alt="">
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">Math </h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">The Page for your Mathematical Needs!</p>
+
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Calculator</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1: Calculator-->
+       <form class="linkcalc" name="sci-calc">
+        <div class="box">
+        <div class="calculator">
+            <div class="calculator__display"><input id="display" name="display" value="0"></div>
+               <div class="calculator__keys">  
+               <input type="button" value="C" class="clear" onclick="this.form.display.value= 0 ">
+               <input type="button" value="DEL" class="delete" onclick="deleteChar(this.form.display)">
+
+               <input type="button" value="&#960;" class="key--operator" onclick="addChar(this.form.display,'3.14159265359')">
+               <input type="button" class="key--operator" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }">
+               <input type="button" class="key--operator" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }">
+               <input type="button" class="key--operator" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }">
+
+               <input type="button" value="&radic;" class="key--operator" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }">
+               <input type="button" class="key--operator" value="x&sup2;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }">
+               <input type="button" class="key--operator" value="(" onclick="addChar(this.form.display, '(')">
+               <input type="button" class="key--operator" value=")" onclick="addChar(this.form.display,')')">
+
+               <input type="button" value="^"  class="key--operator" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }">
+               <input type="button" value="ln" class="key--operator" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }">
+               <input type="button" value="%" class="key--operator" onclick="percent(this.form.display)">
+               <input type="button" value="&#247;" class="key--operator" onclick="addChar(this.form.display, '/')">
+
+               <input type="button" value="7" onclick="addChar(this.form.display, '7')">
+               <input type="button" value="8" onclick="addChar(this.form.display, '8')">
+               <input type="button" value="9" onclick="addChar(this.form.display, '9')">
+               <input type="button" value="*" class="key--operator" onclick="addChar(this.form.display, '*')">
+               
+               <input type="button" value="4" onclick="addChar(this.form.display, '4')">
+               <input type="button" value="5" onclick="addChar(this.form.display, '5')">
+               <input type="button" value="6" onclick="addChar(this.form.display, '6')">
+               <input type="button" value="-" class="key--operator" onclick="addChar(this.form.display, '-')">
+               
+               
+               <input type="button" value="1" onclick="addChar(this.form.display, '1')">
+               <input type="button" value="2" onclick="addChar(this.form.display, '2')">
+               <input type="button" value="3" onclick="addChar(this.form.display, '3')">
+               <input type="button" value="+" class="key--operator" onclick="addChar(this.form.display, '+')">
+               
+               
+               <input type="button"  value="&#177" onclick="changeSign(this.form.display)">
+               <input type="button" value="0" onclick="addChar(this.form.display, '0')">
+               <input type="button"  value="&#46;" onclick="addChar(this.form.display, '&#46;')">
+               <input type="button" value="=" class="key--equal" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+               
+               </div>
+               </div>
+       </form>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+    
+    <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Area Calculator</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+
+        <!-- Portfolio Item 1: Calculator-->
+     <div class="tab">
+  <button class="tablinks" onclick="conversion(event, 'Triangle')">Triangle</button>
+  <button class="tablinks" onclick="conversion(event, 'Rectangle')">Rectangle</button>
+  <button class="tablinks" onclick="conversion(event, 'Circle')">Circle</button>  
+</div>
+<div id="Triangle" class="tabcontent">
+  <div class="container">
+    <div id="container">
+        <img src="img/triangle.png" alt="Triangle" height="25%" width="25%">
+        <br>
+        <br>
+        <label>Base:</label>
+        <input class="display" placeholder="Base..." type="text" min="0" id="tri"/>
+         <label>Height:</label>
+        <input class="display" placeholder="Height..." type="text" min="0" id="tri2"/>
+        <br>
+        <br>
+         <label>Area:</label>
+        <input class="display" type="text" id="result" />
+    </div>
+  </div>
+</div>
+
+<div id="Rectangle" class="tabcontent">
+  <div class="container">
+    <div id="container">
+         <img src="img/rectangle.png" alt="Rectangle" height="25%" width="25%">
+        <br>
+        <br>
+        <label>Base:</label>
+        <input class="display" placeholder="Base..." type="text" min="0" id="rect"/>
+        <label>Height:</label>
+        <input class="display" placeholder="Height..." type="text" min="0" id="rect2"/>
+         <br>
+         <br>
+        <label>Area:</label>
+        <input class="display" type="text" id="result2" />
+    </div>
+  </div>
+</div>
+    
+<div id="Circle" class="tabcontent">
+  <div class="container">
+    <div id="container">
+         <img src="img/circle.svg" alt="Triangle" height="13%" width="13%">
+        <br>
+        <br>
+        <label>Radius:</label>
+        <input class="display" placeholder="Radius..." type="text" min="0" id="cir"/>
+         <br>
+         <br>
+        <div class="together">
+        <label>Area:</label>
+        <input class="display" type="text" id="result3" />
+        </div>
+    </div>
+  </div>
+</div>
+
+      <!-- /.row -->
+
+    </div>
+  </section>
+    
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Trigonometry Formulas</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1: Trigonometry Formula Images -->
+        <img src="img/TrigFormulas.png" alt="Trigonometry Formulas Image" height="100%" width="100%">
+        
+      </div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+    
+    <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Calculus Formula</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1: Calculus Formulas Image-->
+        <img src="img/CalculusFormulas.png" alt="Calculus Formulas Image" height="100%" width="100%">
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+    
+     
+    <section class="page-section portfolio blue" id="portfolio">
+    <div class="container" id="disqus">
+
+        <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-lamp-cse-fau-edu-mchoudhury2016.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+    
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Calculator JavaScript -->
+  <script src="js/calculator.js"></script>
+
+  <!-- Area Calculator -->
+  <script src="js/area.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+    
+  <script id="dsq-count-scr" src="//https-lamp-cse-fau-edu-mchoudhury2016.disqus.com/count.js" async></script>
+
+
+</body>
+
+</html>
